@@ -1,9 +1,8 @@
--- =====================================================
 -- Project: CustomerBehavior_Analysis
--- Company: Adona Bioscience (Kenya)
+-- Company: xxxxxxxxxx Company (Kenya)
 -- Purpose: Track customer behavior and campaign performance
 
--- 1. Create Customers table (anonymized)
+-- 1. Create Customers table
 CREATE TABLE Adona_Customers (
     CustomerID INT PRIMARY KEY,
     CustomerName VARCHAR(100),
@@ -46,7 +45,7 @@ INSERT INTO Adona_Orders (OrderID, CustomerID, CampaignID, OrderAmount, OrderDat
 (3, 2, 1, 7500.00, '2024-03-20'),
 (4, 3, 1, 18000.00, '2024-03-22');
 
--- 4. Query: Total spend per customer for Adona campaign
+-- 4. Query: Total spend per customer for Sssss campaign
 SELECT 
     c.CustomerID,
     c.CustomerName,
@@ -54,7 +53,7 @@ SELECT
 FROM Adona_Customers c
 JOIN Adona_Orders o ON c.CustomerID = o.CustomerID
 JOIN Adona_Campaigns cm ON o.CampaignID = cm.CampaignID
-WHERE cm.CampaignName = 'Adona Spring Promo'
+WHERE cm.CampaignName = 'ccccc Spring Promo'
 GROUP BY c.CustomerID, c.CustomerName
 ORDER BY TotalSpent DESC;
 
