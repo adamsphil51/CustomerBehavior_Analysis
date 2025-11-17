@@ -9,7 +9,7 @@ CREATE TABLE Adona_Customers (
     SignupDate DATE
 );
 
--- Insert anonymized sample customers
+-- Insert customers
 INSERT INTO Adona_Customers (CustomerID, CustomerName, SignupDate) VALUES
 (1, 'Customer A', '2024-01-10'),
 (2, 'Customer B', '2024-02-18'),
@@ -23,7 +23,7 @@ CREATE TABLE Adona_Campaigns (
     EndDate DATE
 );
 
--- Insert sample campaign
+-- Insert campaign
 INSERT INTO Adona_Campaigns (CampaignID, CampaignName, StartDate, EndDate) VALUES
 (1, 'Adona Spring Promo', '2024-03-01', '2024-03-31');
 
@@ -38,7 +38,7 @@ CREATE TABLE Adona_Orders (
     FOREIGN KEY (CampaignID) REFERENCES Adona_Campaigns(CampaignID)
 );
 
--- Insert sample orders in Kenyan Shillings (KES)
+-- Insert orders in Kenyan Shillings (KES)
 INSERT INTO Adona_Orders (OrderID, CustomerID, CampaignID, OrderAmount, OrderDate) VALUES
 (1, 1, 1, 12000.50, '2024-03-05'),
 (2, 1, 1, 15000.00, '2024-03-15'),
